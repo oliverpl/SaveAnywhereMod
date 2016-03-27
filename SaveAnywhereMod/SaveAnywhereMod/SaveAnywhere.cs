@@ -41,13 +41,9 @@ namespace SaveAnywhereMod
 
         private void ControlEvents_KeyPressed(object sender, EventArgsKeyPressed e)
         {
-            if (e.KeyPressed.ToString().Equals("NumPad0"))
+            if (e.KeyPressed.ToString().Equals("F10"))
             {
                 Save();
-            }
-            else if (e.KeyPressed.ToString().Equals("NumPad9"))
-            {
-                WarpPlayer();
             }
         }
 
