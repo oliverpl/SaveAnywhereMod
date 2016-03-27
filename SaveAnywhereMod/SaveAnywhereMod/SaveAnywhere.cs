@@ -31,10 +31,8 @@ namespace SaveAnywhereMod
 
         private void PlayerEvents_LoadedGame(object sender, EventArgsLoadedGameChanged e)
         {
-            Log.Info(_debuggerInfo + "Game loaded.");
             if (e.LoadedGame && Config.LoadOnLoad)
             {
-                Log.Info(_debuggerInfo + "Attempting to resume game from recent save data.");
                 readyToLoad = true;
             }
         }
@@ -63,7 +61,6 @@ namespace SaveAnywhereMod
             Config.WriteConfig();
             Log.Info(_debuggerInfo + "Save Successful.");
             SGame.setGameMode(0);
-            //StardewValley.SaveGame.getSaveEnumerator();
         }
 
         public void WarpPlayer()
